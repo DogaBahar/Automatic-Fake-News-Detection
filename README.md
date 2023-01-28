@@ -71,3 +71,46 @@ On these embeddings, I trained them with 4 machine learning classification metho
 (KNN, Logistic Regression, Support Vector Machine, and Naive Bayes) after SMOTE
 method. For BERT and SBERT classifiers I did not use SMOTE because of not interfere
 with their own pipeline process
+
+![Model selection](https://user-images.githubusercontent.com/56762763/215285162-23cb5aed-e0fc-4fa5-878d-cbe8cef5f7aa.png)
+
+# Result Tables
+
+_BERT Results_
+
+|   | Feature Selection | Classification Model | Weighted Average F1 Score |
+|---|-------------------|----------------------|---------------------------|
+| 1 | BERT              | BERT                 | 0.99                      |
+| 2 | BERT              | Naive Bayes          | 0.78                      |
+| 3 | BERT              | KNN                  | 0.87                      |
+| 4 | BERT              | SVC                  | 0.97                      |
+| 5 | BERT              | Logistic Regression  | 0.97                      |
+
+
+_SBERT Results_
+
+|   | Feature Selection | Classification Model | Weighted Average F1 Score |
+|---|-------------------|----------------------|---------------------------|
+| 1 | SBERT              | BERT                 | 0.99                      |
+| 2 | SBERT              | Naive Bayes          | 0.90                      |
+| 3 | SBERT              | KNN                  | 0.82                      |
+| 4 | SBERT              | SVC                  | 0.98                      |
+| 5 | SBERT              | Logistic Regression  | 0.96                      |
+
+
+_Word2Vec Results_
+
+|   | Feature Selection | Classification Model | Weighted Average F1 Score |
+|---|-------------------|----------------------|---------------------------|
+| 1 | Word2Vec          |  Naive Bayes         | 0.71                      |
+| 2 | Word2Vec          | Naive Bayes          | 0.62                      |
+| 3 | Word2Vec          | KNN                  | 0.87                      |
+| 4 | Word2Vec          | SVC                  | 0.83                      |
+
+# Results 
+
+As a result, I purposed a automatic fake news detection with various and up to date
+machine learning methods and classifiers. I also modified a Turkish dataset that
+includes 25.157 data and applied SMOTE and text summarization methods along
+with many pre-processing steps including zemberek stemming. The best results can
+be reached with SBERT vectorization and classification.
